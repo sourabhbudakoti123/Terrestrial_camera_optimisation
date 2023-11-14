@@ -1,15 +1,13 @@
 # Terrestrial_camera_optimisation
-Photogrammetry
-cam.py -'camera location','image size', 'view direction', 'f', 'c, 'Rcoeff', 'Tcoeff', 'Rotational matrix','Full Model'full_model => ye saari cheezien milti hai hume
+camera.py: This is the main file where all functions and operations related to cameras are executed.
 
-focal.py - focal length real world wale ko pixels mai change krke deta hai 
+cam.py: This file contains 20 critical parameters and information such as 'camera location,' 'image size,' 'view direction,' 'f' ( focal length), 'c' (principal point), 'Rcoeff' (rotation coefficient), 'Tcoeff' (translation coefficient), 'Rotational matrix,' and the 'Full Model.' 
 
-principal_point.py- ye hume 'c' deta hai center of image 
+focal.py: This file converts the real-world focal length to pixel units.
 
-rotaion_matrix.py - ye hume R rotation matrix deta hai from some mathematical formulae
+principal_point.py: It provides the 'c' value, indicating the center of the image. 
 
-gcp_txt_to_matrix.py -> ye text file ko hume matrix mai deta hai 
+rotation_matrix.py: This file computes and provides the rotation matrix ('R') using mathematical formulae. 
 
-camera.py - ye main file jahan ssab call hoyenge aur operations honge
-
-project.py - ye sare cam se aaye hue ko use krke 3d se 2d mai bana dega
+gcp_txt_to_matrix.py: It processes text files containing Ground Control Points (GCPs) and converts them into a matrix format. 
+project.py: This fike utilizes information from the cameras (derived from Photogrammetry cam.py) to transform the 3D information captured by the cameras into a 2D representation.
